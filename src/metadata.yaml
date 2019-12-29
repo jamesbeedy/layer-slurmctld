@@ -1,0 +1,20 @@
+name: slurmctld
+summary: The central management daemon of Slurm.
+maintainer: Omnivector Solutions <info@omnivector.solutions>
+description: |
+  slurmctld is the central management daemon of Slurm. It monitors all other Slurm daemons and resources, accepts work (jobs), and allocates resources to those jobs. Given the critical functionality of slurmctld, there may be a backup server to assume these functions in the event that the primary server fails.
+tags:
+  - slurm
+  - hpc
+subordinate: false
+series:
+  - bionic
+resources:
+  slurmctld:
+    type: file
+    filename: slurm.snap
+    description: Slurm snap
+  munge:
+    type: file
+    filename: munge.snap
+    description: Munge snap

@@ -1,0 +1,9 @@
+includes: ["layer:basic", "layer:snap"]
+
+options:
+  snap:
+    munge:
+      channel: stable
+    slurmctld:
+      connect:
+        - ["slurmctld:munged-socket", "munge:munged-socket"]
